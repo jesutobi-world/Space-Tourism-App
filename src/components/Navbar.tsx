@@ -17,7 +17,7 @@ export const Navbar = () => {
           <path fill-rule="evenodd" clip-rule="evenodd" d="M24 0C24 0 24 24 0 24C23.5776 24.1714 24 48 24 48C24 48 24 24 48 24C24 24 24 0 24 0Z" fill="#0B0D17" />
         </svg>
       </div>
-      <nav className={`nav-menu ${isNavVisible ? 'show-nav' : ''}`}>
+      <nav className={`nav-menu ${isNavVisible ? 'show-nav' : 'remove-nav'}`}>
         <MdClear className="times" onClick={toggleNav}  />
         <ul className="nav-list">
           <li><Link to="/" className={`list-item ${location.pathname === '/' ? 'active' : ''}`}><span>00</span>Home</Link></li>

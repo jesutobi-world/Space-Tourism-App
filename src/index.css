@@ -75,6 +75,10 @@ font-family: 'Bellefair', serif; */
   padding: 20px 40px;
 }
 
+.nav-line {
+  display: none;
+}
+
 .nav-list {
   display: flex;
   list-style: none;
@@ -90,11 +94,13 @@ font-family: 'Bellefair', serif; */
   font-size: 1.5rem;
   font-weight: 300;
 }
-.list-item span{
+
+.list-item span {
   padding-right: 10px;
   font-weight: 600;
 }
-.times{
+
+.times {
   position: absolute;
   right: 40px;
   top: 20px;
@@ -119,14 +125,15 @@ font-family: 'Bellefair', serif; */
 }
 
 /* Destination Styles */
-.destination{
+.destination {
   width: 100vw;
   height: 100%;
   background: url(./assets/destination/background-destination-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.technology{
+
+.technology {
   width: 100vw;
   height: 100%;
   background: url(./assets/technology/background-technology-mobile.jpg);
@@ -145,7 +152,7 @@ font-family: 'Bellefair', serif; */
     justify-content: space-between;
     position: unset;
     padding: 0 0 0 60px;
-    
+
   }
 
   .nav-logo {
@@ -169,6 +176,16 @@ font-family: 'Bellefair', serif; */
     padding: 0;
   }
 
+  .nav-line {
+    display: inline;
+    width: 500px;
+    height: 1px;
+    position: absolute;
+    left: -78%;
+    opacity: 0.2515;
+    background: #FFF;
+  }
+
   .nav-list {
     display: flex;
     flex-direction: row;
@@ -182,34 +199,37 @@ font-family: 'Bellefair', serif; */
 
 
   /* Home Styles */
-.home {
-  width: 100vw;
-  height: 100%;
-  background: url(./assets/home/background-home-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.crew {
-  width: 100vw;
-  height: 100%;
-  background: url(./assets/crew/background-crew-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.destination{
-  width: 100vw;
-  height: 100%;
-  background: url(./assets/destination/background-destination-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.technology{
-  width: 100vw;
-  height: 100%;
-  background: url(./assets/technology/background-technology-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  .home {
+    width: 100vw;
+    height: 100%;
+    background: url(./assets/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .crew {
+    width: 100vw;
+    height: 100%;
+    background: url(./assets/crew/background-crew-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .destination {
+    width: 100vw;
+    height: 100%;
+    background: url(./assets/destination/background-destination-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .technology {
+    width: 100vw;
+    height: 100%;
+    background: url(./assets/technology/background-technology-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 
 }

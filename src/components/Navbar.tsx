@@ -11,13 +11,13 @@ export const Navbar = () => {
       </div>
       <nav className="nav-menu">
         <TiTimes className="times" />
-        {/* <div className="nav-line"></div> */}
         <ul className="nav-list">
           <li><Link to="/" className='list-item'><span>00</span>Home</Link></li>
           <li><Link to="/destination" className='list-item'><span>01</span>Destination</Link></li>
           <li><Link to="/crew" className='list-item'><span>02</span>Crew</Link></li>
           <li><Link to="/technology" className='list-item'><span>03</span>Technology</Link></li>
         </ul>
+        <div className="nav-line"></div>
       </nav>
       <TiThMenu className="bars" />
     </div>

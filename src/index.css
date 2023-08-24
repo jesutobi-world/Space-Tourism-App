@@ -75,10 +75,13 @@ font-family: 'Bellefair', serif; */
   padding: 20px 30px;
   opacity: 0;
 }
-.show{
+.show-nav{
   opacity: 1;
   height: 100vh;
   transition: height 0.6s ease;
+}
+.remove-bars{
+  display: none;
 }
 .nav-line {
   display: none;

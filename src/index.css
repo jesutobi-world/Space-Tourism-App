@@ -47,8 +47,12 @@ font-family: 'Bellefair', serif; */
   width: 50px;
 }
 
-.bars,
-.times {
+.bars{
+  color: #D0D6F9;
+  font-size: 50px;
+  cursor: pointer;
+}
+.times{
   color: #D0D6F9;
   font-size: 60px;
   cursor: pointer;

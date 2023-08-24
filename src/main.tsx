@@ -6,7 +6,6 @@ import { Destination } from './components/Pages/Destination.tsx'
 import { Technology } from './components/Pages/Technology.tsx'
 import './index.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

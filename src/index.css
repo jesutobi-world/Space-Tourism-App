@@ -1,69 +1,217 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Bellefair&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  width: 100vw;
+  height: auto;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+  width: 100%;
+  height: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+
+/* Layout Styles */
+.layout {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+}
+
+/* Mobile */
+
+/* NavBar Styles */
+.navbar {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+  position: relative;
+  font-family: Barlow Condensed;
+}
+
+.nav-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.bars,
+.times {
+  color: #D0D6F9;
+  font-size: 60px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.logo {
+  height: 100%;
+  width: 100%;
 }
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.04);
+  height: 100vh;
+  right: 0;
+  top: 0;
+  width: 300px;
+  max-width: 70vw;
+  backdrop-filter: blur(40px);
+  --webkit-backdrop-filter: blur(40px);
+  transition: width 0.3s ease;
+  padding: 20px 40px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 50px;
+}
+
+.list-item {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.list-item span{
+  padding-right: 10px;
+  font-weight: 600;
+}
+.times{
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+
+/* Home Styles */
+.home {
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/home/background-home-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Crew Styles */
+.crew {
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/crew/background-crew-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Destination Styles */
+.destination{
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/destination/background-destination-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.technology{
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/technology/background-technology-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Tablet */
+@media all and (min-width: 768px) {
+
+  /* NavBar Styles */
+  .navbar {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-between;
+    position: unset;
+    padding: 0 0 0 60px;
+    
+  }
+
+  .nav-logo {
+    height: 60px;
+    width: 60px;
+  }
+
+  .bars,
+  .times {
+    display: none;
+  }
+
+
+  .nav-menu {
+    display: flex;
+    position: unset;
+    height: 60%;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 0
+  }
+
+  .list-item {
+    font-size: 1.1rem;
+  }
+
+
+  /* Home Styles */
+.home {
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.crew {
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.destination{
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.technology{
+  width: 100vw;
+  height: 100%;
+  background: url(./assets/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+}
+
+/* Desktop */

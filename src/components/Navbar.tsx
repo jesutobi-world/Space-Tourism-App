@@ -1,6 +1,8 @@
-import { Link } from 'react-router-dom';
-import { TiTimes, TiThMenu } from "react-icons/ti";
+
+import { Link, useLocation } from 'react-router-dom';
+import {MdDensityMedium, MdClear} from 'react-icons/md'
 export const Navbar = () => {
+  const location = useLocation();
   return (
     <div className="navbar">
       <div className="nav-logo">
@@ -10,16 +12,16 @@ export const Navbar = () => {
         </svg>
       </div>
       <nav className="nav-menu">
-        <TiTimes className="times" />
+        <MdClear className="times" />
         <ul className="nav-list">
-          <li><Link to="/" className='list-item'><span>00</span>Home</Link></li>
-          <li><Link to="/destination" className='list-item'><span>01</span>Destination</Link></li>
-          <li><Link to="/crew" className='list-item'><span>02</span>Crew</Link></li>
-          <li><Link to="/technology" className='list-item'><span>03</span>Technology</Link></li>
+          <li><Link to="/" className={`list-item ${location.pathname === '/' ? 'active' : ''}`}><span>00</span>Home</Link></li>
+          <li><Link to="/destination" className={`list-item ${location.pathname === '/destination' ? 'active' : ''}`}><span>01</span>Destination</Link></li>
+          <li><Link to="/crew" className={`list-item ${location.pathname === '/crew' ? 'active' : ''}`}><span>02</span>Crew</Link></li>
+          <li><Link to="/technology" className={`list-item ${location.pathname === '/technology' ? 'active' : ''}`}><span>03</span>Technology</Link></li>
         </ul>
         <div className="nav-line"></div>
       </nav>
-      <TiThMenu className="bars" />
+      <MdDensityMedium className="bars" />
     </div>
   )
 }

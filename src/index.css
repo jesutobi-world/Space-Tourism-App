@@ -30,6 +30,17 @@ font-family: 'Bellefair', serif; */
 }
 
 /* Mobile */
+.main{
+  margin-top:50px;
+  width:100%;
+  height:auto; 
+  display:flex;
+  gap:70px;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:0 30px;
+}
 
 /* NavBar Styles */
 .navbar {
@@ -173,7 +184,38 @@ font-family: 'Bellefair', serif; */
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+.home-text{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.home-text p{
+  font-family: Barlow Condensed;
+  color: #D0D6F9;
+  font-size:1.2rem;
+  font-weight:400;
+}
+.home-text h1{
+  font-family: Bellefair;
+  color: #FFF;
+  font-weight:400;
+  font-size:5rem;
+}
+.home-text p:last-child{
+  line-height:2.4rem;
+  font-size:1.1rem;
+}
+.explore{
+  width:250px;
+  height:250px;
+  background-color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-family: Bellefair;
+  font-size:1.7rem;
+}
 /* Crew Styles */
 .crew {
   width: 100vw;
@@ -200,8 +242,18 @@ font-family: 'Bellefair', serif; */
   background-size: cover;
 }
 
-/* Tablet */
+/* Desktop */
 @media all and (min-width: 768px) {
+  .main{
+    background-color:red;
+    margin-top:50px;
+    width:100%;
+    height:auto; 
+    display:grid;
+    grid-template-columns: 1fr 1fr; 
+    padding:;
+    text-align:left;
+  }
 
   /* NavBar Styles */
   .navbar {
@@ -286,6 +338,7 @@ font-family: 'Bellefair', serif; */
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .home-text{}
   
   .crew {
     width: 100vw;

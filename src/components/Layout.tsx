@@ -9,7 +9,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="layout">
       <Navbar />
-      <main>
+      <main className="main">
         {children}
       </main>
     </div>

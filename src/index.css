@@ -45,7 +45,8 @@ body {
   justify-content: space-between;
   position: relative;
   font-family: Barlow Condensed;
-  z-index: 1;
+  position: relative;
+  z-index: 100;
 }
 
 .nav-logo {

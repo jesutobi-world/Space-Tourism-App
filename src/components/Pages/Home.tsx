@@ -1,5 +1,6 @@
 import { Layout } from "../Layout";
 import { motion } from "framer-motion";
+import '../../home.css'
 
 export const Home: React.FC = () => {
   const containerVariants = {

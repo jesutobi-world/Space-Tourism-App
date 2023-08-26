@@ -16,15 +16,8 @@ body {
   width: 100%;
   height: 100%;
 }
-/* Home Styles */
-.home {
-  width: 100vw;
-  min-height: 100vh;
-  background: url(./assets/home/background-home-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 0.3s ease-in-out;
-}
+
+
 
 /* Layout Styles */
 .layout {
@@ -39,6 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  justify-content: space-evenly;
   padding: 50px 30px;
 }
 
@@ -51,6 +45,7 @@ body {
   justify-content: space-between;
   position: relative;
   font-family: Barlow Condensed;
+  z-index: 9999;
 }
 
 .nav-logo {
@@ -178,66 +173,17 @@ body {
 
 
 
-.home-text {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
 
-.home-text p {
-  font-family: Barlow Condensed;
-  color: #D0D6F9;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
 
-.home-text h1 {
-  font-family: Bellefair;
-  color: #FFF;
-  font-weight: 400;
-  font-size: 5rem;
-}
 
-.home-text p:last-child {
-  line-height: 2.4rem;
-  font-size: 1.1rem;
-}
 
-.explore-div {
-  width: 100%;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.explore {
-  width: 250px;
-  height: 250px;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  font-family: Bellefair;
-  font-size: 1.7rem;
-}
 
 /* Crew Styles */
 .crew {
   width: 100vw;
   height: 100%;
   background: url(./assets/crew/background-crew-mobile.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: 0.3s ease-in-out;
-}
-
-/* Destination Styles */
-.destination {
-  width: 100vw;
-  height: 100%;
-  background: url(./assets/destination/background-destination-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.3s ease-in-out;
@@ -264,16 +210,6 @@ body {
 
 /* Desktop */
 @media all and (min-width: 768px) {
-
-  /* Home Styles */
-  .home {
-    /* width: 100vw; */
-    min-height: 100vh;
-    background: url(./assets/home/background-home-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-    /* Layout Styles */
     .layout {
       width: 100%;
       height: 100%;
@@ -357,68 +293,14 @@ body {
     transition: width 0.3s, opacity 0.3s;
     opacity: 0;
   }
-  .home .main{
-    height: calc(100vh - 120px); 
-  }
 
-  .home-text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    height: 100%;
-    justify-content: end;
-    padding: 0 2rem;
-  }
 
-  .home-text p {
-    font-size: 2rem;
-  }
 
-  .home-text h1 {
-    font-family: Bellefair;
-    color: #FFF;
-    font-weight: 400;
-    font-size: 5rem;
-  }
-
-  .home-text p:last-child {
-    line-height: 2.4rem;
-    font-size: 1.1rem;
-    width: 85%;
-  }
-
-  .explore-div {
-    padding: 20px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-
-  .explore {
-    width: 300px;
-    height: 300px;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-family: Bellefair;
-    font-size: 2rem;
-  }
 
   .crew {
     width: 100vw;
     height: 100%;
     background: url(./assets/crew/background-crew-desktop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .destination {
-    width: 100vw;
-    height: 100%;
-    background: url(./assets/destination/background-destination-desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }

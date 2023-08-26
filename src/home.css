@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&family=Bellefair&display=swap');
+
+/* Mobile Styles */
+.home {
+    width: 100vw;
+    min-height: 100vh;
+    background: url(./assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.3s ease-in-out;
+  }
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .home-text p {
+    font-family: Barlow Condensed;
+    color: #D0D6F9;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .home-text h1 {
+    font-family: Bellefair;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 5rem;
+  }
+  
+  .home-text p:last-child {
+    line-height: 2.4rem;
+    font-size: 1.1rem;
+  }
+  
+  .explore-div {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .explore {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-family: Bellefair;
+    font-size: 1.7rem;
+  }
+/* Tablet Styles */
+@media all and (min-width: 768px) {
+    .home {
+        width: 100vw;
+        min-height: 100vh;
+        background: url(./assets/home/background-home-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      } 
+      .home .main{
+        height: calc(100vh - 120px); 
+        justify-content: unset;
+      }
+      .home-text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100%;
+        justify-content: end;
+        padding: 0 2rem;
+      }
+    
+      .home-text p {
+        font-size: 2rem;
+      }
+    
+      .home-text h1 {
+        font-family: Bellefair;
+        color: #FFF;
+        font-weight: 400;
+        font-size: 5rem;
+      }
+    
+      .home-text p:last-child {
+        line-height: 2.4rem;
+        font-size: 1.1rem;
+        width: 85%;
+      }
+    
+      .explore-div {
+        padding: 20px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+      }
+    
+      .explore {
+        width: 300px;
+        height: 300px;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-family: Bellefair;
+        font-size: 2rem;
+      }
+}
+
+/* Desktop Styles */

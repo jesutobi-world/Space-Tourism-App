@@ -1,53 +1,81 @@
 import { Layout } from "../Layout"
-import {motion} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 import data from '../../data.json'
 import '../../destination.css'
-import {Link} from 'react-router-dom';
-const moonImageSrc = data.destinations[0].images.png;
+import { useState } from "react"
 
 
 export const Destination:React.FC = () => {
+  const [selectedDestination, setSelectedDestination] = useState(data.destinations[0]);
+  const handleNavClick = (destination) => {
+    setSelectedDestination(destination);
+  };
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.75 } },
+    exit: { opacity: 0, transition: { duration: 0.75 } }
+  };
+
+  const textVariants = {
+    hidden: { y: -20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.75, delay: 0.2 } }
+  };
+
+  const imageVariants = {
+    hidden: { scale: 0 },
+    visible: { scale: 1, transition: { duration: 0.5, delay: 0.5 } }
+  };
   return (
-    <motion.div className="destination"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-    transition={{ duration: 0.75 }}
+    <motion.div 
+    className="destination"
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    exit="exit"
     >
     <Layout>
       <div className="title">
         <h1><span>01</span>PICK YOUR DESTINATION</h1>
       </div>
       <div className="content">
+        <AnimatePresence mode="popLayout">
         <div className="planet-div">
-          <img src={moonImageSrc} alt={data.destinations[0].name} />
+          <motion.img src={selectedDestination.images.png} alt={selectedDestination.name} variants={imageVariants} />
         </div>
-        <div className="text-content">
+        </AnimatePresence>
+        <AnimatePresence>
+        <motion.div className="text-content" variants={textVariants}>
           <nav className="nav">
-            <Link to={data.destinations[0].name} className="moon link">Moon</Link>
-            <Link to={data.destinations[1].name} className="mars link">Mars</Link>
-            <Link to={data.destinations[2].name} className="europa link">Europa</Link>
-            <Link to={data.destinations[3].name} className="titan link">Titan</Link>
+          {data.destinations.map(destination => (
+            <p
+              key={destination.name}
+              className={`link ${destination.name} ${onclick=() =>{'active'}}`}
+              onClick={() => handleNavClick(destination)}
+            >
+              {destination.name}
+            </p>
+          ))}
           </nav>
           <div className="description">
             <div className="name">
-              <h2>{data.destinations[0].name}</h2>
+              <h2>{selectedDestination.name}</h2>
             </div>
             <div className="intro">
-              <p>{data.destinations[0].description}</p>
+              <p>{selectedDestination.description}</p>
             </div>
           </div>
           <div className="statistics">
             <div className="distance">
               <h3>AVG. DISTANCE</h3>
-              <p>{data.destinations[0].distance}</p>
+              <p>{selectedDestination.distance}</p>
             </div>
             <div className="time">
               <h3>Est. travel time</h3>
-              <p>{data.destinations[0].travel}</p>
+              <p>{selectedDestination.travel}</p>
             </div>
           </div>
-        </div>
+        </motion.div>
+        </AnimatePresence>
       </div>
     </Layout>
   </motion.div>

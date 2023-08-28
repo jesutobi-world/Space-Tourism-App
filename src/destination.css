@@ -81,6 +81,8 @@ span {
 .text-content {
     height: auto;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav {
@@ -103,36 +105,14 @@ span {
     width: auto;
     border-bottom: 2px solid transparent;
 }
-/* .active{
-    border-bottom:  solid #fff
-} */
 .nav .link:hover {
     border-bottom: 2px solid #c7c4ce;
     transition: 0.3s ease;
 }
-
-/* 
-.nav>.link::after {
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: #c7c4c4;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    transition: width 0.3s, opacity 0.3s;
-    transition: opacity 0.3s;
-    opacity: 0;
-
-}
-
-
-.nav .link.active::after{
-    width: 100%;
-    opacity: 1;
-    background-color: white;
-} */
+.nav .link.active {
+    border-bottom: 2px solid white;
+    color: white;
+  }
 
 
 .description {

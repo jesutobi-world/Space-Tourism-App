@@ -6,10 +6,23 @@ import { useState } from "react"
 
 
 export const Destination:React.FC = () => {
-  const [selectedDestination, setSelectedDestination] = useState(data.destinations[0]);
-  const handleNavClick = (destination) => {
+  const [selectedDestination, setSelectedDestination] = useState<
+    Destination
+  >(data.destinations[0]);
+  const handleNavClick = (destination:Destination) => {
     setSelectedDestination(destination);
   };
+  interface Destination {
+    name: string;
+    images: {
+      png: string;
+      webp: string;
+    };
+    description: string;
+    distance: string;
+    travel: string;
+  }
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { duration: 0.75 } },
